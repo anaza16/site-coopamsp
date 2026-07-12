@@ -1,0 +1,485 @@
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body{
+    background-color: #FDFFD9;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display:flex;
+}
+
+/* ESTILO CABECALHO */
+
+header{
+    padding: 40px 4% 10px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color:#4a504e;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color:black;
+    transform: scale(1.05);
+
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.logo img {
+    width: 150px; 
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* ESTILO DO TOPO DO SITE*/
+
+section.topo-do-site {
+    width: 100%;
+    padding: 0;
+}
+
+.img-topo-site img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+section.topo-do-site .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* IMAGEM DE FUNDO */
+   
+    background-repeat: no-repeat;
+    background-size: cover;        /* Faz a imagem preencher a área sem distorcer */
+    background-position: center;
+    
+    /* ESPAÇAMENTO */
+    padding: 80px 4%;              /* Aumenta o espaço interno para a imagem aparecer */
+    width: 100%;
+    min-height: 500px;             /* Garante uma altura mínima para a imagem */
+}
+
+
+.img-topo-site img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.txt-topo-site {
+    text-align: center;    /* Centraliza o título e o parágrafo */
+}
+
+.topo-do-site h1{
+    color: #2B416B;
+    font-size: 42px;
+    line-height: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.topo-do-site .txt-topo-site h1 span{
+    color:black;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #000;
+    margin: 25px auto;
+    font-size: 20px;
+    font-weight: 400;              /* Negrito bem destacado */
+    line-height: 1.6;
+    max-width: 800px;              /* Limita a largura para ficar bonito no centro */
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Usando seletores compostos para garantir que o estilo seja aplicado */
+section.topo-do-site .txt-topo-site a.btn-saiba-mais {
+    display: inline-block;
+    background-color: #2B416B !important; /* !important garante a cor se houver conflito */
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif; /* Usando uma das fontes que você importou */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+section.topo-do-site .txt-topo-site a.btn-saiba-mais:hover {
+    background-color: #1a2845 !important;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.colunas-historia {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.coluna {
+    flex: 1;
+}
+
+.coluna h1 {
+    font-size: 28px !important;
+    margin-bottom: 15px;
+}
+
+.coluna p {
+    font-size: 16px !important;
+    line-height: 1.5;
+    text-align: left !important;
+}
+
+@media (max-width: 900px) {
+    .colunas-historia {
+        flex-directioon: column;
+    }
+
+    .coluna {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ESTILO SEÇÃO SOBRE */
+
+.sobre {
+    padding: 80px 4%;
+}
+
+.flex-sobre {
+    display: flex;
+    align-items: center;       /* Alinha verticalmente no centro */
+    justify-content: center;   /* Centraliza o conjunto no meio da tela */
+    gap: 50px;                 /* Espaço entre as imagens e o texto */
+}
+
+.txt-sobre {
+    text-align: center;        /* Centraliza o h2 e os p */
+    flex: 1;                   /* Faz o texto ocupar o espaço central */
+    max-width: 500px;          /* Limita a largura do texto*/
+    font-size: large;         
+}
+
+.txt-sobre h2 {
+    color: #2B416B;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.txt-sobre p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+.img-1-sobre img, 
+.img-2-sobre img {
+    max-width: 400px;          /* tamanho desejado */
+    width: 100%;               /* Garante que seja responsivo */
+    height: auto;
+    border-radius: 10px;       /*arredonda as bordas*/
+    display: block;
+}
+
+/* ESTILO SEÇÃO PRODUTOS */
+
+.produtos {
+    background-color: #f9f9f9;
+    padding: 100px 4%;
+}
+
+.titulo-sessao {
+    text-align: center;
+    font-size: 38px;
+    color: #2B416B;
+    margin-bottom: 50px;
+}
+
+.titulo-sessao span {
+    color: #d71f1f; /* Cor de destaque para o "Produtos" */
+}
+
+.container-produtos {
+    display: flex;
+    flex-direction: column; /* Coloca um embaixo do outro */
+    gap: 110px; /* Espaço entre cada categoria */
+}
+
+.card-produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    background-color: #dfe0bf; /* Fundo branco para destacar do fundo bege do body */
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s ease, box shadow 0.4s ease;
+    border: 1px solid #f0f0f0
+}
+
+/* Inverte a ordem de cada segundo card para o layout ficar dinâmico (opcional) */
+.card-produto: hover{
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08)
+}
+
+.img-produto {
+    flex: 2;
+}
+
+.img-produto img {
+    width: 100%;
+    max-width: 350px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    transition: transform 0.5s cubic-bezier(0.1775, 0.885, 0.32, 1.275);
+}
+
+.img-produto img:hover {
+    transform: scale(1.05);
+}
+
+.card-produto:hover .img-produto img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.txt-produto {
+    flex: 1;
+    text-align: left;
+}
+
+.txt-produto h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #2B416B;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.txt-produto h3::after {
+    content: '';
+    display: block;
+    width: 400px;
+    height: 4px;
+    background-color: #d71f1f;
+    margin-top: 10px;
+}
+
+.txt-produto p {
+    font-size: 1.1rem;
+    color: #474646;
+    margin-bottom: 25px;
+    
+}
+
+.subtitulo-sessao {
+    text-align:left;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+    color: #d71f1f;
+    margin-bottom: 40px;
+    font-weight: 350;
+}
+
+.txt-sobre2{
+    text-align: center;
+}
+
+.txt-sobre2 h1{
+    font-family:'Playfair Display', serif;
+    color: #2B416B;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.txt-sobre2 p{
+    color: #000;
+    margin: 25px auto;
+    font-size: 20px;
+    font-weight: 400;              
+    line-height: 1.6;
+    max-width: 800px;              
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Configuração Geral da Seção */
+.contato-secao {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 80px;
+    padding: 80px 4%;
+    width: 100%;
+    background-color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    align-items: flex-start; /* Alinha o topo dos dois lados */
+    justify-content: center;
+}
+
+/* Estilo do Formulário */
+.formulario-container {
+    flex: 1; 
+    max-width: 600px;
+    min-width: 300px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.formulario-container h2, .mapa-container h2 {
+    margin-bottom: 20px;
+    color: #2B416B;
+    font-size:32px;
+    font-family: 'Playfair Display', serif;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+
+.campo input, .campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #072522;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-enviar {
+    background-color: #1b273e;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.btn-enviar:hover {
+    background-color: #208888;
+    color: white;
+}
+
+/* Estilo do Mapa e Endereço */
+.mapa-container {
+    flex: 0 0 450px; /* Largura fixa no desktop */
+    background-color: transparent;
+
+}
+
+.texto-contato {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.texto-contato p {
+    margin: 2px 0;
+}
+
+.mapa-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .contato-secao {
+        flex-direction: column; /* Empilha o formulário e depois o mapa */
+        align-items: center;
+        padding: 100px 4%;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .mapa-container {
+        flex: 1;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Organiza as colunas da história */
+.colunas-historia {
+    display: grid;
+    /* Cria 3 colunas de tamanhos iguais quando a tela for grande */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; /* Cria um espaçamento (borda/respiro) entre as colunas */
+    margin-top: 40px;
+    text-align: left; /* Melhora a leitura dos parágrafos longos */
+}
+
+/* Ajusta o espaçamento interno de cada coluna e separa o título do texto */
+.coluna h1 {
+    margin-bottom: 15px; /* Não deixa o título grudado no parágrafo dele */
+    font-size: 28px; /* Ajusta o tamanho para os títulos menores das colunas */
+}
+
+.coluna p {
+    text-align: justify; /* Opcional: deixa o texto alinhado bonitinho nas laterais */
+}
+
+/* Responsividade: Se a tela for celular/pequena, as colunas viram linhas automaticamente */
+@media (max-width: 768px) {
+    .colunas-historia {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
